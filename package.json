@@ -1,0 +1,22 @@
+{
+  "name": "koapro",
+  "version": "1.0.0",
+  "description": "'koa learn'",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppmiao0628/ppmKoa.git"
+  },
+  "author": "ppm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ppmiao0628/ppmKoa/issues"
+  },
+  "homepage": "https://github.com/ppmiao0628/ppmKoa#readme",
+  "dependencies": {
+    "koa": "^2.6.1"
+  }
+}
