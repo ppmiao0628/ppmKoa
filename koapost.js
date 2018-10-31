@@ -29,12 +29,25 @@ function setPostDate(ctx) {
                 postData += data;
             });
             ctx.req.on('end', () => {
-                resolve(postData);
+
+                resolve(parseQueryString(postData));
             })
         } catch (error) {
             reject(error);
         }
     })
+}
+function parseQueryString(queryStr) {
+    let queryStrData = {};
+    let queryStrList = queryStr.split('&');
+    console.log(queryStrList);
+    for (let [index, queryStr] of queryStrList.entries()) {
+        console.log(index);
+        // console.log(queryStrList.entries().next().value);
+        let itemList = queryStr.split('=');
+        queryStrData[itemList[0]] = decodeURIComponent(itemList[1]);
+    }
+    return queryStrData;
 }
 app.listen('9000', () => {
     console.log('koa is start working at 9000...');
